@@ -14,7 +14,7 @@ export class CoursesService {
     return this.http.get<any>(`${environment.baseURL}storefront/products?filter[sub_product_type]=course&filter[product_type]=digital`);
   }
 
-  getCourseById(productId:number){
+  getCourseById(productId:any){
     return this.http.get<any>(`${environment.baseURL}storefront/products/`+productId);
   }
 

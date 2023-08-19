@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="color: white;">{{courseDetails.attributes.name}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img [src]="courseDetails.attributes.course.image_url" alt="image">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p style="color: white;">{{courseDetails.attributes.course.description}}</p>
+        </div>
+        <div class="col">
+            <h5 style="color: white;">Course Start Date</h5>
+            <p style="color: white;">{{courseDetails.attributes.course.start_date}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h5 style="color: white;">Course Price</h5>
+            <p style="color: white;">{{courseDetails.attributes.display_price}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h5 style="color: white;">Course Video</h5>
+            
+            <video width="320" height="240" controls>
+                <source [src]="courseDetails.attributes.course.video_url" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+    </div>
+</div>
+
+

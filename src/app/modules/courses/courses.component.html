@@ -7,11 +7,12 @@
     </div>
 </div>
 <div class="container">
-    <div class="card" *ngFor="let course of coursesList;">
-        <img [src]="course.attributes.course.image_url" alt="cheetah">
+    <div class="card" (click)="getCourseDetails(course)" *ngFor="let course of coursesList;">
+        <img [src]="course?.attributes?.course?.image_url" alt="cheetah">
         <div class="intro">
-            <h1>{{course.attributes.name}}</h1>
-            <p>{{course.attributes.course.description}}</p>
+            <h1>{{course?.attributes?.name}}</h1>
+            <p>{{course?.attributes?.course?.description}}</p>
         </div>
     </div>
 </div>
+
